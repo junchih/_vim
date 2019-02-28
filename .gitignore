@@ -1,0 +1,11 @@
+syntax: glob
+
+# vim itself
+.*.sw?
+.netrwhist
+# vim-plug
+.plugged
+
+# for mac os noising
+.DS_Store
+._*
