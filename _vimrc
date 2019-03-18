@@ -29,7 +29,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
-set colorcolumn=80
+set colorcolumn=80,120
 set laststatus=2
 "set ruler
 set hls
