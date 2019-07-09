@@ -41,6 +41,10 @@ set backspace=indent,eol,start
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 
+nmap <Leader>ex :Explore<CR>
+nmap <Leader>% :vsplit<CR>
+nmap <Leader>" :split<CR>
+
 "set foldlevel=99
 
 
