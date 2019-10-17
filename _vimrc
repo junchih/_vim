@@ -12,6 +12,12 @@ Plug 'vim-airline/vim-airline'
 " < brew install ctags >
 Plug 'majutsushi/tagbar'
 
+" depending nodejs & yarn
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" haskell filetype plugin < brew install stack >
+Plug 'neovimhaskell/haskell-vim'
+
 " golang plugin < brew install golang >
 Plug 'fatih/vim-go', {
 		\ 'do': ':GoInstallBinaries',
@@ -53,6 +59,7 @@ nmap <Leader>" :split<CR>
 let config_files = [
 		\ 'syntastic_setup.vim',
 		\ 'tagbar_setup.vim',
+		\ 'haskell_setup.vim',
 		\ 'vimgo_setup.vim',
 	\ ]
 
