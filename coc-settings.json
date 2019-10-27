@@ -1,6 +1,6 @@
 {
     "languageserver": {
-        "haskell": {
+        "haskell.bak": {
             "command": "hie-wrapper",
             "filetypes": [
                 "hs",

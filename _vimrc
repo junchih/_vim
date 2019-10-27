@@ -13,15 +13,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 
 " depending nodejs & yarn
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " haskell filetype plugin < brew install stack >
 Plug 'neovimhaskell/haskell-vim'
 
 " golang plugin < brew install golang >
-Plug 'fatih/vim-go', {
-		\ 'do': ':GoInstallBinaries',
-	\ }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 call plug#end()
 
