@@ -2,18 +2,12 @@ let g:vim_home = get(g:, 'vim_home', expand('~/.vim/'))
 
 
 " junegunn/vim-plug
-
 call plug#begin(g:vim_home.'/.plugged')
 
 Plug 'vim-syntastic/syntastic'
-
 Plug 'vim-airline/vim-airline'
-
 " < brew install ctags >
 Plug 'majutsushi/tagbar'
-
-" depending nodejs & yarn
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " haskell filetype plugin < brew install stack >
 Plug 'neovimhaskell/haskell-vim'
@@ -25,10 +19,8 @@ call plug#end()
 
 
 " basic configuration
-
 filetype plugin indent on
 syntax on
-
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -51,16 +43,13 @@ nmap <Leader>" :split<CR>
 
 "set foldlevel=99
 
-
 " plugins configurations
-
 let config_files = [
 		\ 'syntastic_setup.vim',
 		\ 'tagbar_setup.vim',
 		\ 'haskell_setup.vim',
 		\ 'vimgo_setup.vim',
 	\ ]
-
 for config_file in config_files
 	exec 'source' g:vim_home.config_file
 endfor
