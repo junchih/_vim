@@ -14,6 +14,8 @@ Plug 'neovimhaskell/haskell-vim'
 
 " golang plugin < brew install golang >
 Plug 'fatih/vim-go'
+" clang plugin
+Plug 'justmao945/vim-clang'
 
 call plug#end()
 
@@ -49,6 +51,7 @@ let config_files = [
 		\ 'tagbar_setup.vim',
 		\ 'haskell_setup.vim',
 		\ 'vimgo_setup.vim',
+		\ 'clang_setup.vim',
 	\ ]
 for config_file in config_files
 	exec 'source' g:vim_home.config_file
