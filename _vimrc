@@ -13,7 +13,7 @@ Plug 'majutsushi/tagbar'
 Plug 'neovimhaskell/haskell-vim'
 
 " golang plugin < brew install golang >
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go'
 
 call plug#end()
 
