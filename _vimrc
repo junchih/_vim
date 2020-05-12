@@ -31,6 +31,7 @@ set colorcolumn=80,120
 set background=dark
 set t_Co=256
 set laststatus=2
+set noswapfile
 "set ruler
 set hls
 
