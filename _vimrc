@@ -6,14 +6,23 @@ call plug#begin(g:vim_home.'/.plugged')
 
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
-" < brew install ctags >
+" need ctags
 Plug 'majutsushi/tagbar'
 
-" haskell filetype plugin < brew install stack >
+" haskell filetype plugin
 Plug 'neovimhaskell/haskell-vim'
 
-" golang plugin < brew install golang >
+" golang plugin
 Plug 'fatih/vim-go'
+
+" for ocaml, need opam & merlin
+if executable('opam')
+	let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+	if isdirectory(g:opamshare . "/merlin/vim")
+		Plug g:opamshare . "/merlin/vim"
+	endif
+endif
+
 " clang plugin
 Plug 'justmao945/vim-clang'
 
