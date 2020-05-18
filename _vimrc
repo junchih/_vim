@@ -8,7 +8,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 " need ctags
 Plug 'majutsushi/tagbar'
-
 " haskell filetype plugin
 Plug 'neovimhaskell/haskell-vim'
 
@@ -22,9 +21,6 @@ if executable('opam')
 		Plug g:opamshare . "/merlin/vim"
 	endif
 endif
-
-" clang plugin
-Plug 'justmao945/vim-clang'
 
 call plug#end()
 
