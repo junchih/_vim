@@ -9,14 +9,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'Raimondi/delimitMate'
 Plug 'easymotion/vim-easymotion'
 Plug 'dracula/vim', {'as': 'dracula'}
+" tmux
+Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 " c
 Plug 'justinmk/vim-syntax-extra'
 " python
 Plug 'vim-python/python-syntax'
-" tmux
-Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
 " protobuf
 Plug 'uarun/vim-protobuf'
@@ -47,13 +47,14 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set colorcolumn=80,120
-set background=dark
+"set background=dark
 colorscheme dracula
 set t_Co=256
 set laststatus=2
 set noswapfile
 "set ruler
 set hls
+set scrolloff=2
 
 set backspace=indent,eol,start
 
