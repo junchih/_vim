@@ -8,6 +8,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'Raimondi/delimitMate'
 Plug 'easymotion/vim-easymotion'
+Plug 'dracula/vim', {'as': 'dracula'}
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 " c
@@ -47,6 +48,7 @@ set shiftwidth=4
 set noexpandtab
 set colorcolumn=80,120
 set background=dark
+colorscheme dracula
 set t_Co=256
 set laststatus=2
 set noswapfile

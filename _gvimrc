@@ -4,6 +4,6 @@ exec 'source' g:vim_home.'_vimrc'
 
 set columns=80
 set lines=60
-colorscheme desert
+" colorscheme desert
 set guifont=Monaco:h10
 set guioptions=
