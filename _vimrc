@@ -11,13 +11,15 @@ Plug 'easymotion/vim-easymotion'
 Plug 'dracula/vim', {'as': 'dracula'}
 " tmux
 Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
-" haskell
-Plug 'neovimhaskell/haskell-vim'
+" nix
+Plug 'LnL7/vim-nix'
 " c
 Plug 'justinmk/vim-syntax-extra'
 " python
 Plug 'vim-python/python-syntax'
 
+" haskell
+Plug 'neovimhaskell/haskell-vim'
 " protobuf
 Plug 'uarun/vim-protobuf'
 " terraform
