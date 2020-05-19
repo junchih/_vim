@@ -26,15 +26,19 @@ Plug 'uarun/vim-protobuf'
 Plug 'hashivim/vim-terraform'
 
 " ctags
-Plug 'majutsushi/tagbar'
+if executable('ctags')
+	Plug 'majutsushi/tagbar'
+endif
 " golang
-Plug 'fatih/vim-go'
+if executable('go')
+	Plug 'fatih/vim-go'
+endif
 
 " ocaml, need opam & merlin
 if executable('opam')
 	let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 	if isdirectory(g:opamshare . "/merlin/vim")
-		Plug g:opamshare . "/merlin/vim"
+		execute "Plug '" . g:opamshare . "/merlin/vim'"
 	endif
 endif
 
@@ -75,6 +79,7 @@ let config_files = [
 		\ 'tagbar_setup.vim',
 		\ 'haskell_setup.vim',
 		\ 'vimgo_setup.vim',
+		\ 'ocaml_setup.vim',
 	\ ]
 for config_file in config_files
 	exec 'source' g:vim_home.config_file

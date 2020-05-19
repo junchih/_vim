@@ -7,9 +7,13 @@ bindkey -v
 
 export PS1=$'%n@%m:%{\e[0;36m%}%1~%{\e[0;31m%}$ %{\e[0m%}'
 export PATH="$HOME/bin:$PATH"
+
 export EDITOR="vi"
 if type "vim" > /dev/null; then
 	export EDITOR="vim"
+fi
+if type "opam" > /dev/null; then
+	eval "$(opam env)"
 fi
 if type "direnv" > /dev/null; then
 	eval "$(direnv hook zsh)"
