@@ -6,15 +6,28 @@ call plug#begin(g:vim_home.'/.plugged')
 
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
-" need ctags
-Plug 'majutsushi/tagbar'
-" haskell filetype plugin
+Plug 'Raimondi/delimitMate'
+Plug 'easymotion/vim-easymotion'
+" haskell
 Plug 'neovimhaskell/haskell-vim'
+" c
+Plug 'justinmk/vim-syntax-extra'
+" python
+Plug 'vim-python/python-syntax'
+" tmux
+Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 
-" golang plugin
+" protobuf
+Plug 'uarun/vim-protobuf'
+" terraform
+Plug 'hashivim/vim-terraform'
+
+" ctags
+Plug 'majutsushi/tagbar'
+" golang
 Plug 'fatih/vim-go'
 
-" for ocaml, need opam & merlin
+" ocaml, need opam & merlin
 if executable('opam')
 	let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 	if isdirectory(g:opamshare . "/merlin/vim")
@@ -57,7 +70,6 @@ let config_files = [
 		\ 'tagbar_setup.vim',
 		\ 'haskell_setup.vim',
 		\ 'vimgo_setup.vim',
-		\ 'clang_setup.vim',
 	\ ]
 for config_file in config_files
 	exec 'source' g:vim_home.config_file

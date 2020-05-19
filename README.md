@@ -1,2 +1,3 @@
-# vim_home
+# _vim
+
 my vim home directory
