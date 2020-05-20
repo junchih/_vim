@@ -11,19 +11,22 @@ Plug 'easymotion/vim-easymotion'
 Plug 'dracula/vim', {'as': 'dracula'}
 " tmux
 Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
+
 " nix
 Plug 'LnL7/vim-nix'
-" c
-Plug 'justinmk/vim-syntax-extra'
-" python
-Plug 'vim-python/python-syntax'
-
+" lua
+Plug 'tbastos/vim-lua'
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 " protobuf
 Plug 'uarun/vim-protobuf'
 " terraform
 Plug 'hashivim/vim-terraform'
+
+" c
+Plug 'justinmk/vim-syntax-extra'
+" python
+Plug 'vim-python/python-syntax'
 
 " ctags
 if executable('ctags')
