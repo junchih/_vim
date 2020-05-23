@@ -4,16 +4,17 @@ let g:vim_home = get(g:, 'vim_home', expand('~/.vim/'))
 " junegunn/vim-plug
 call plug#begin(g:vim_home.'/.plugged')
 
-Plug 'vim-syntastic/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'Raimondi/delimitMate'
-Plug 'easymotion/vim-easymotion'
-Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'vim-syntastic/syntastic',   { 'tag': '3.*' }
+Plug 'vim-airline/vim-airline',   { 'tag': 'v0.*' }
+Plug 'dracula/vim',               { 'tag': 'v2.*', 'as': 'dracula' }
+Plug 'Raimondi/delimitMate',      { 'tag': '2.*' }
+Plug 'easymotion/vim-easymotion', { 'tag': 'v3.*' }
+
 " tmux
 Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
-
 " nix
 Plug 'LnL7/vim-nix'
+
 " lua
 Plug 'tbastos/vim-lua'
 " haskell
@@ -30,11 +31,11 @@ Plug 'vim-python/python-syntax'
 
 " ctags
 if executable('ctags')
-	Plug 'majutsushi/tagbar'
+	Plug 'majutsushi/tagbar', { 'tag': 'v2.*' }
 endif
 " golang
 if executable('go')
-	Plug 'fatih/vim-go'
+	Plug 'fatih/vim-go', { 'tag': 'v1.*' }
 endif
 
 " ocaml, need opam & merlin

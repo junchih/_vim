@@ -14,5 +14,9 @@ let g:syntastic_check_on_wq = 0
 
 " golang checker
 let g:syntastic_go_checkers = [ 'govet', 'errcheck', 'go' ]
+
 " shell checker < brew install shellcheck >
-let g:syntastic_sh_shellcheck_args="-x"
+let g:syntastic_sh_shellcheck_args = "-x"
+
+" ocaml checker
+let g:syntastic_ocaml_checkers = ['merlin']
