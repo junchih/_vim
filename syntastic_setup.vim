@@ -13,10 +13,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " golang checker
-let g:syntastic_go_checkers = [ 'govet', 'errcheck', 'go' ]
-
-" shell checker < brew install shellcheck >
-let g:syntastic_sh_shellcheck_args = "-x"
+" govet checker will failed while jumping the location from the error list
+" window
+let g:syntastic_go_checkers = [ 'go' ]
 
 " ocaml checker
-let g:syntastic_ocaml_checkers = ['merlin']
+let g:syntastic_ocaml_checkers = [ 'merlin' ]
+
+" shell checker < brew install shellcheck >
+let g:syntastic_sh_checkers = [ 'shellcheck' ]
+let g:syntastic_sh_shellcheck_args = "-x"
