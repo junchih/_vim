@@ -17,8 +17,6 @@ Plug 'LnL7/vim-nix'
 
 " lua
 Plug 'tbastos/vim-lua'
-" haskell
-Plug 'neovimhaskell/haskell-vim'
 " protobuf
 Plug 'uarun/vim-protobuf'
 " terraform
@@ -84,7 +82,6 @@ nmap <Leader>" :split<CR>
 let config_files = [
 		\ 'syntastic_setup.vim',
 		\ 'tagbar_setup.vim',
-		\ 'haskell_setup.vim',
 		\ 'vimgo_setup.vim',
 		\ 'ocaml_setup.vim',
 	\ ]
