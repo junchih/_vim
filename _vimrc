@@ -7,7 +7,6 @@ call plug#begin(g:vim_home.'/.plugged')
 Plug 'vim-syntastic/syntastic',   { 'tag': '3.*' }
 Plug 'vim-airline/vim-airline',   { 'tag': 'v0.*' }
 Plug 'dracula/vim',               { 'tag': 'v2.*', 'as': 'dracula' }
-Plug 'Raimondi/delimitMate',      { 'tag': '2.*' }
 Plug 'easymotion/vim-easymotion', { 'tag': 'v3.*' }
 
 " tmux
