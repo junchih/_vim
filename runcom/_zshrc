@@ -6,7 +6,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 export PS1=$'%n@%m:%{\e[0;36m%}%1~%{\e[0;31m%}$ %{\e[0m%}'
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export EDITOR="vi"
 if type "vim" > /dev/null; then
