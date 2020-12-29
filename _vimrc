@@ -4,32 +4,26 @@ let g:vim_home = get(g:, 'vim_home', expand('~/.vim/'))
 " junegunn/vim-plug
 call plug#begin(g:vim_home.'/.plugged')
 
-Plug 'vim-syntastic/syntastic',   { 'tag': '3.*' }
-Plug 'vim-airline/vim-airline',   { 'tag': 'v0.*' }
-Plug 'dracula/vim',               { 'tag': 'v2.*', 'as': 'dracula' }
-Plug 'easymotion/vim-easymotion', { 'tag': 'v3.*' }
+Plug 'vim-syntastic/syntastic', { 'tag': '3.*' }
+Plug 'vim-airline/vim-airline', { 'tag': 'v0.*' }
+Plug 'dracula/vim',             { 'tag': 'v2.*', 'as': 'dracula' }
+if executable('ctags')
+	Plug 'preservim/tagbar', { 'tag': 'v2.*' }
+endif
 
 " tmux
 Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 " nix
 Plug 'LnL7/vim-nix'
-
 " lua
 Plug 'tbastos/vim-lua'
 " protobuf
 Plug 'uarun/vim-protobuf'
 " terraform
 Plug 'hashivim/vim-terraform'
-
 " c
 Plug 'justinmk/vim-syntax-extra'
-" python
-Plug 'vim-python/python-syntax'
 
-" ctags
-if executable('ctags')
-	Plug 'majutsushi/tagbar', { 'tag': 'v2.*' }
-endif
 " golang
 if executable('go')
 	Plug 'fatih/vim-go', { 'tag': 'v1.*' }
