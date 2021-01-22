@@ -50,6 +50,7 @@ set noexpandtab
 set colorcolumn=80,120
 "set background=dark
 colorscheme dracula
+hi Normal ctermbg=NONE
 set t_Co=256
 set laststatus=2
 set noswapfile
