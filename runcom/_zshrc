@@ -29,3 +29,9 @@ case "$OSTYPE" in
 	dragonfly*|freebsd*|netbsd*|openbsd*)
 	;;
 esac
+
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+function title() {
+	echo "\033]0;${1}\007\c"
+}
