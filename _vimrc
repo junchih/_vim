@@ -8,11 +8,11 @@ Plug 'vim-syntastic/syntastic', { 'tag': '3.*' }
 Plug 'vim-airline/vim-airline', { 'tag': 'v0.*' }
 Plug 'dracula/vim',             { 'tag': 'v2.*', 'as': 'dracula' }
 if executable('ctags')
-	Plug 'preservim/tagbar', { 'tag': 'v2.*' }
+	Plug 'preservim/tagbar', { 'tag': 'v3.*' }
 endif
 
 " tmux
-Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
+Plug 'ericpruitt/tmux.vim', { 'rtp': 'vim/' }
 " nix
 Plug 'LnL7/vim-nix'
 " lua
@@ -23,18 +23,17 @@ Plug 'uarun/vim-protobuf'
 Plug 'hashivim/vim-terraform'
 " c
 Plug 'justinmk/vim-syntax-extra'
+" php
+Plug 'StanAngeloff/php.vim'
 
 " golang
 if executable('go')
 	Plug 'fatih/vim-go', { 'tag': 'v1.*' }
 endif
 
-" ocaml, need opam & merlin
-if executable('opam')
-	let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-	if isdirectory(g:opamshare . "/merlin/vim")
-		execute "Plug '" . g:opamshare . "/merlin/vim'"
-	endif
+" ocaml, need merlin
+if executable('ocamlmerlin')
+	Plug 'ocaml/merlin', { 'tag': 'v3.*',  'rtp': 'vim/merlin/' }
 endif
 
 call plug#end()
@@ -48,8 +47,8 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set colorcolumn=80,120
-"set background=dark
 colorscheme dracula
+"set background=dark
 hi Normal ctermbg=NONE
 set t_Co=256
 set laststatus=2

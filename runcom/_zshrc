@@ -12,12 +12,6 @@ export EDITOR="vi"
 if type "vim" > /dev/null; then
 	export EDITOR="vim"
 fi
-if type "opam" > /dev/null; then
-	eval "$(opam env)"
-fi
-if type "direnv" > /dev/null; then
-	eval "$(direnv hook zsh)"
-fi
 
 case "$OSTYPE" in
 	darwin*)
@@ -30,8 +24,20 @@ case "$OSTYPE" in
 	;;
 esac
 
-if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 function title() {
 	echo "\033]0;${1}\007\c"
 }
+
+if [ -d "$HOME/.gopath" ]; then
+	export GOPATH="$HOME/.gopath"
+	export GOBIN="$HOME/bin"
+fi
+if type "opam" > /dev/null; then
+	eval "$(opam env)"
+fi
+if type "direnv" > /dev/null; then
+	eval "$(direnv hook zsh)"
+fi
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+	. ~/.nix-profile/etc/profile.d/nix.sh;
+fi # added by Nix installer
