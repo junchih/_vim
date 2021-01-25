@@ -75,7 +75,7 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  title: tty
+  title: term
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
@@ -102,7 +102,7 @@ scrolling:
   multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
   #normal:
     # Font family
@@ -150,7 +150,7 @@ scrolling:
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 10.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -173,7 +173,7 @@ scrolling:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night)
 #colors:
@@ -339,7 +339,7 @@ scrolling:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+background_opacity: 0.9
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -389,7 +389,7 @@ background_opacity: 0.8
   #thickness: 0.15
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -402,9 +402,9 @@ background_opacity: 0.8
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/zsh
-#  args:
-#    - --login
+  program: zsh
+  args:
+    - --login
 
 # Startup directory
 #
@@ -415,7 +415,7 @@ working_directory: None
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -425,7 +425,7 @@ working_directory: None
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
   #url:
     # URL launcher
