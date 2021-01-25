@@ -37,6 +37,7 @@ if type "opam" > /dev/null; then
 fi
 if type "direnv" > /dev/null; then
 	eval "$(direnv hook zsh)"
+	alias tmux='direnv exec / tmux' # tricky, copied from https://direnv.net/CHANGELOG.html, 2.6.0 / 2015-02-15
 fi
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
 	. ~/.nix-profile/etc/profile.d/nix.sh;
