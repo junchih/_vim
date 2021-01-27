@@ -28,6 +28,10 @@ function title() {
 	echo "\033]0;${1}\007\c"
 }
 
+function vidots() {
+	vi "$HOME/.vim/${1}"
+}
+
 if [ -d "$HOME/.gopath" ]; then
 	export GOPATH="$HOME/.gopath"
 	export GOBIN="$HOME/bin"
