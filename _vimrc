@@ -6,7 +6,7 @@ call plug#begin(g:vim_home.'/.plugged')
 
 Plug 'vim-syntastic/syntastic', { 'tag': '3.*' }
 Plug 'vim-airline/vim-airline', { 'tag': 'v0.*' }
-Plug 'dracula/vim',             { 'tag': 'v2.*', 'as': 'dracula' }
+Plug 'tomasiser/vim-code-dark'
 if executable('ctags')
 	Plug 'preservim/tagbar', { 'tag': 'v3.*' }
 endif
@@ -48,7 +48,8 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set colorcolumn=80,120
-colorscheme dracula
+colorscheme codedark
+let g:airline_theme = 'codedark'
 "set background=dark
 hi Normal ctermbg=NONE
 set t_Co=256
