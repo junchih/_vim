@@ -10,6 +10,7 @@ Plug 'dracula/vim',             { 'tag': 'v2.*', 'as': 'dracula' }
 if executable('ctags')
 	Plug 'preservim/tagbar', { 'tag': 'v3.*' }
 endif
+Plug 'tpope/vim-vinegar', { 'tag': 'v1.*' }
 
 " tmux
 Plug 'ericpruitt/tmux.vim', { 'rtp': 'vim/' }
@@ -65,7 +66,7 @@ autocmd InsertLeave * set nocul
 " remap the leader key for hhkb
 let mapleader = ","
 
-nmap <Leader>ex :Explore<CR>
+" tmux like split
 nmap <Leader>% :vsplit<CR>
 nmap <Leader>" :split<CR>
 
