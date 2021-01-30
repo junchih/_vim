@@ -52,6 +52,7 @@ colorscheme codedark
 let g:airline_theme = 'codedark'
 "set background=dark
 hi Normal ctermbg=NONE
+hi EndOfBuffer ctermbg=NONE
 set t_Co=256
 set laststatus=2
 set noswapfile
