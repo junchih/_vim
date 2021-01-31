@@ -32,9 +32,9 @@ if executable('go')
 	Plug 'fatih/vim-go', { 'tag': 'v1.*' }
 endif
 
-" ocaml, need merlin
-if executable('ocamlmerlin')
-	Plug 'ocaml/merlin', { 'tag': 'v3.*',  'rtp': 'vim/merlin/' }
+" fsharp, need fsharp & mono
+if executable('fsharpi')
+	Plug 'kongo2002/fsharp-vim'
 endif
 
 call plug#end()
@@ -79,8 +79,7 @@ let config_files = [
 		\ 'syntastic_setup.vim',
 		\ 'tagbar_setup.vim',
 		\ 'vimgo_setup.vim',
-		\ 'ocaml_setup.vim',
-	\ ]
+		\]
 for config_file in config_files
 	exec 'source' g:vim_home.config_file
 endfor
