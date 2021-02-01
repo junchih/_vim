@@ -15,11 +15,12 @@ let g:syntastic_check_on_wq = 0
 " golang checker
 " govet checker will failed while jumping the location from the error list
 " window
-let g:syntastic_go_checkers = [ 'go' ]
-
-" ocaml checker
-let g:syntastic_ocaml_checkers = [ 'merlin' ]
+if executable('go')
+	let g:syntastic_go_checkers = [ 'go' ]
+endif
 
 " shell checker < brew install shellcheck >
-let g:syntastic_sh_checkers = [ 'shellcheck' ]
-let g:syntastic_sh_shellcheck_args = "-x"
+if executable('shellcheck')
+	let g:syntastic_sh_checkers = [ 'shellcheck' ]
+	let g:syntastic_sh_shellcheck_args = "-x"
+endif

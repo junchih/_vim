@@ -4,82 +4,49 @@ let g:vim_home = get(g:, 'vim_home', expand('~/.vim/'))
 " junegunn/vim-plug
 call plug#begin(g:vim_home.'/.plugged')
 
-Plug 'vim-syntastic/syntastic', { 'tag': '3.*' }
-Plug 'vim-airline/vim-airline', { 'tag': 'v0.*' }
-Plug 'tomasiser/vim-code-dark'
-if executable('ctags')
-	Plug 'preservim/tagbar', { 'tag': 'v3.*' }
-endif
-Plug 'tpope/vim-vinegar', { 'tag': 'v1.*' }
+	Plug 'tomasiser/vim-code-dark'
 
-" tmux
-Plug 'ericpruitt/tmux.vim', { 'rtp': 'vim/' }
-" nix
-Plug 'LnL7/vim-nix'
-" lua
-Plug 'tbastos/vim-lua'
-" protobuf
-Plug 'uarun/vim-protobuf'
-" terraform
-Plug 'hashivim/vim-terraform'
-" c
-Plug 'justinmk/vim-syntax-extra'
-" php
-Plug 'StanAngeloff/php.vim'
+	Plug 'tpope/vim-vinegar',       { 'tag': 'v1.*' }
+	Plug 'vim-syntastic/syntastic', { 'tag': '3.*' }
+	Plug 'vim-airline/vim-airline', { 'tag': 'v0.*' }
+	if executable('ctags')
+		Plug 'preservim/tagbar',    { 'tag': 'v3.*' }
+	endif
 
-" golang
-if executable('go')
-	Plug 'fatih/vim-go', { 'tag': 'v1.*' }
-endif
+	" php
+	Plug 'StanAngeloff/php.vim'
 
-" fsharp, need fsharp & mono
-if executable('fsharpi')
-	Plug 'kongo2002/fsharp-vim'
-endif
+	" golang
+	if executable('go')
+		Plug 'fatih/vim-go', { 'tag': 'v1.*' }
+	endif
+
+	" fsharp, need fsharp & mono
+	if executable('fsharpi')
+		Plug 'kongo2002/fsharp-vim'
+	endif
+
+	" tmux
+	Plug 'ericpruitt/tmux.vim', { 'rtp': 'vim/' }
+	" nix
+	Plug 'LnL7/vim-nix'
+	" c
+	Plug 'justinmk/vim-syntax-extra'
+	" lua
+	Plug 'tbastos/vim-lua'
+
+	" protobuf
+	Plug 'uarun/vim-protobuf'
+	" terraform
+	Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
-
-" basic configuration
-filetype plugin indent on
-syntax on
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
-set colorcolumn=80,120
-colorscheme codedark
-let g:airline_theme = 'codedark'
-"set background=dark
-hi Normal ctermbg=NONE
-hi EndOfBuffer ctermbg=NONE
-set t_Co=256
-set laststatus=2
-set noswapfile
-"set ruler
-set hls
-set scrolloff=2
-
-set backspace=indent,eol,start
-
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set nocul
-
-" remap the leader key for hhkb
-let mapleader = ","
-
-" tmux like split
-nmap <Leader>% :vsplit<CR>
-nmap <Leader>" :split<CR>
-
-"set foldlevel=99
-
 " plugins configurations
-let config_files = [
-		\ 'syntastic_setup.vim',
-		\ 'tagbar_setup.vim',
-		\ 'vimgo_setup.vim',
-		\]
-for config_file in config_files
-	exec 'source' g:vim_home.config_file
+let setup_files = split(globpath(g:vim_home, '*_setup.vim'), '\n')
+for setup_file in setup_files
+	exec 'source' setup_file
 endfor
+
+" customizing
+exec 'source' g:vim_home.'customizing.vim'
