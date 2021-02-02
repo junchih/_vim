@@ -33,7 +33,7 @@ autocmd InsertLeave * set nocul
 " remap the leader key for hhkb
 let mapleader = ","
 " tmux like split
-nmap <Leader>% :vsplit<CR>
 nmap <Leader>" :split<CR>
+nmap <Leader>% :vsplit<CR>
 
 "set foldlevel=99

@@ -1,4 +1,4 @@
-" set \sc as its hotkey
+" set \sc as syntastics hotkey
 nmap <Leader>sc :SyntasticCheck<CR>
 " passive syntax check
 let g:syntastic_mode_map = { 'mode': 'passive' }

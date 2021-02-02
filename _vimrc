@@ -42,11 +42,11 @@ call plug#begin(g:vim_home.'/.plugged')
 
 call plug#end()
 
+" customizing
+exec 'source' g:vim_home.'customizing.vim'
+
 " plugins configurations
 let setup_files = split(globpath(g:vim_home, '*_setup.vim'), '\n')
 for setup_file in setup_files
 	exec 'source' setup_file
 endfor
-
-" customizing
-exec 'source' g:vim_home.'customizing.vim'
