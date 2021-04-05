@@ -23,7 +23,7 @@ set laststatus=2
 set noswapfile
 "set ruler
 set hls
-set scrolloff=2
+set scrolloff=5
 
 set backspace=indent,eol,start
 
