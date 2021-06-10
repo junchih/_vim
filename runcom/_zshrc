@@ -3,6 +3,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
+CASE_SENSITIVE="true"
 # End of lines configured by zsh-newuser-install
 
 export PS1=$'%n@%m:%{\e[0;36m%}%1~%{\e[0;31m%}$ %{\e[0m%}'
